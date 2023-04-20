@@ -65,19 +65,24 @@
     </div>
 
     <script>
+
+    setInterval(function () {     
+
+
         // Obtém a data atual
         var dataAtual = new Date();
-
+        
         // Obtém o valor do minuto atual
         var minutoAtual = dataAtual.getMinutes();
-
+        
         // Multiplica o valor do minuto por 2 e adiciona 3
         var resultado = (minutoAtual * 2) + 3;
-
+        
         // Exibe o resultado na página HTML com animação
         var resultadoElement = document.getElementById("resultado");
         resultadoElement.textContent = resultado;
         resultadoElement.style.opacity = 1;
+    }, 1000);
     </script>
 </body>
 </html>
