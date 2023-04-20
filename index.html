@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>A senha é?</title>
+    <style>
+        /* Estilo para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Estilo para o container principal */
+        .container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 32px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Estilo para o título */
+        h1 {
+            color: #333333;
+            margin-bottom: 16px;
+        }
+
+        /* Estilo para o resultado */
+        #resultado {
+            font-size: 48px;
+            color: #0099ff;
+            margin-bottom: 32px;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+
+        /* Estilo para o parágrafo */
+        p {
+            color: #666666;
+            margin-bottom: 32px;
+        }
+
+        /* Estilo para a animação */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Marcelo Junior</h1>
+        <p>A senha é:</p>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        // Obtém a data atual
+        var dataAtual = new Date();
+
+        // Obtém o valor do minuto atual
+        var minutoAtual = dataAtual.getMinutes();
+
+        // Multiplica o valor do minuto por 2 e adiciona 3
+        var resultado = (minutoAtual * 2) + 3;
+
+        // Exibe o resultado na página HTML com animação
+        var resultadoElement = document.getElementById("resultado");
+        resultadoElement.textContent = resultado;
+        resultadoElement.style.opacity = 1;
+    </script>
+</body>
+</html>
